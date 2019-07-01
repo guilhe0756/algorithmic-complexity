@@ -10,4 +10,8 @@ class Timer
     print "Tests started at #{time}"
   end
 
+  def function(function)
+    print function
+  end
+
 end

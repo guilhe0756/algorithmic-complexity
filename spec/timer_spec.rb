@@ -20,4 +20,12 @@ RSpec.describe Timer do
     end
   end
 
+  describe "#function" do
+    context "receives a string with a function's name" do
+      it "and prints it to st" do
+        expect { subject.function("last") }.to output.to_stdout
+      end
+    end
+  end
+
 end
