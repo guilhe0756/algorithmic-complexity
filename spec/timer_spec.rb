@@ -11,4 +11,13 @@ RSpec.describe Timer do
       end
     end
   end
+
+  describe "#stop" do
+    context "prints a string" do
+      it "to stoutput when tests stop" do
+        expect { subject.stop }.to output.to_stdout
+      end
+    end
+  end
+
 end
