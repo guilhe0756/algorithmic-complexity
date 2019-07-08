@@ -34,6 +34,10 @@ RSpec.describe Timer do
       it 'looks for and returns the last element in the array' do
         data = [1, 2, 3, 4, 5]
         expect(timer.last(data)).to be 5
+
+        data_2 = []
+        (50001..100000).each { |x| data_2.push(x)}
+        expect(timer.last(data_2)).to eq(100000)
       end
     end
   end
@@ -47,6 +51,19 @@ RSpec.describe Timer do
         data_2 = []
         (50001..100000).each { |x| data_2.push(x)}
         expect(timer.reverse(data_2)[-1]).to eq(50001)
+      end
+    end
+  end
+
+  describe '#shuffle' do
+    context 'when given an array as input' do
+      it 'shuffles the position of each element' do
+        data = [1, 2, 3, 4, 5]
+        expect(timer.shuffle(data)).not_to eq([1, 2, 3, 4, 5])
+
+        data_2 = []
+        (50001..100000).each { |x| data_2.push(x)}
+        expect(timer.shuffle(data_2)).not_to eq(data_2)
       end
     end
   end

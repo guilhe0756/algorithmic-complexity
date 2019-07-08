@@ -28,7 +28,20 @@ class Timer
     reversed_data
   end
 
-  
+  def shuffle(data)
+    shuffled_array = []
+    until data.count == 0 do
+      random_number = rand(0..data.count - 1)
+      random_element = data.delete_at(random_number)
+        shuffled_array << random_element
+    end
+
+    if shuffled_array != data
+      shuffled_array
+    else
+      shuffle(data)
+    end
+  end
 
   def timed_function(function_name)
     @timed_function = function_name
