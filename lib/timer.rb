@@ -35,13 +35,8 @@ class Timer
       random_element = data.delete_at(random_number)
         shuffled_array << random_element
     end
-
-    if shuffled_array != data
-      shuffled_array
-    else
-      shuffle(data)
-    end
   end
+
 
   def timed_function(function_name)
     @timed_function = function_name
