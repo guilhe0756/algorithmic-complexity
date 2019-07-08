@@ -20,6 +20,16 @@ class Timer
     data[-1]
   end
 
+  def reverse(data)
+    reversed_data = []
+    until data.count == 0 do
+      reversed_data << data.pop
+    end
+    reversed_data
+  end
+
+  
+
   def timed_function(function_name)
     @timed_function = function_name
     puts "The timed function was #{@timed_function}"

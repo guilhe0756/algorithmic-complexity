@@ -42,7 +42,7 @@ data_set = [
 data_set.each do |data|
   timer.timed_function("last")
   timer.run
-  data.last
+  timer.last(data)
   timer.stop
 end
 
