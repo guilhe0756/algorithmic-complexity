@@ -11,8 +11,9 @@ class Timer
 
   def stop
     time = Time.new
-    puts "Tests started at #{@start_time.nsec}"
-    puts "Tests stoped at #{time.nsec}"
+    #time is display with minute:second:microsecond (6 digits)
+    puts "Tests started at #{@start_time.strftime("%M:%S,%6N")}"
+    puts "Tests stoped at #{time.strftime("%M:%S,%6N")}"
   end
 
   def timed_function(function_name)
