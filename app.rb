@@ -38,6 +38,7 @@ data_set = [
   data_10,
 ]
 
+# run timer for each data set for each function
 data_set.each do |data|
   timer.timed_function("last")
   timer.run
@@ -45,7 +46,8 @@ data_set.each do |data|
   timer.stop
 end
 
-puts "Ended test with last"
+#puts end of test to create a visual separation between each test
+puts "Finished testing with last"
 puts "\n"
 
 data_set.each do |data|
@@ -55,7 +57,7 @@ data_set.each do |data|
   timer.stop
 end
 
-puts "Ended test with shuffle"
+puts "Finished testing with shuffle"
 puts "\n"
 
 data_set.each do |data|
@@ -65,5 +67,5 @@ data_set.each do |data|
   timer.stop
 end
 
-puts "Ended test with reverse"
+puts "Finished testing with reverse"
 puts "\n"

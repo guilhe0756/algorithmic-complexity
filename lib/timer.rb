@@ -16,6 +16,10 @@ class Timer
     puts "Tests stoped at #{time.strftime("%M:%S,%6N")}"
   end
 
+  def last(data)
+    data[-1]
+  end
+
   def timed_function(function_name)
     @timed_function = function_name
     puts "The timed function was #{@timed_function}"

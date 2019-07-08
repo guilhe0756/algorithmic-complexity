@@ -2,12 +2,12 @@ require 'timer'
 
 RSpec.describe Timer do
 
-  subject = Timer.new
+  subject(:timer) { described_class.new }
 
   describe "#run" do
     context "prints a string" do
       it "to stoutput when tests start" do
-        expect { subject.run }.to output.to_stdout
+        expect(timer).to respond_to(:run)
       end
     end
   end
@@ -15,7 +15,8 @@ RSpec.describe Timer do
   describe "#stop" do
     context "prints a string" do
       it "to stoutput when tests stop" do
-        expect { subject.stop }.to output.to_stdout
+        timer.run
+        expect { timer.stop }.to output.to_stdout
       end
     end
   end
@@ -23,7 +24,16 @@ RSpec.describe Timer do
   describe "#timed_function" do
     context "receives a string with a function's name" do
       it "and prints it to st" do
-        expect { subject.timed_function("last") }.to output.to_stdout
+        expect { timer.timed_function("last") }.to output.to_stdout
+      end
+    end
+  end
+
+  describe '#last' do
+    context 'looks for' do
+      it 'and returns the last element in the array' do
+        data = [1, 2, 3, 4, 5]
+        expect(timer.last(data)).to be 5
       end
     end
   end
