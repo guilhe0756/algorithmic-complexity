@@ -36,8 +36,8 @@ RSpec.describe Timer do
         expect(timer.last(data)).to be 5
 
         data_2 = []
-        (50001..100000).each { |x| data_2.push(x)}
-        expect(timer.last(data_2)).to eq(100000)
+        (50_001..100_000).each { |x| data_2.push(x) }
+        expect(timer.last(data_2)).to eq(100_000)
       end
     end
   end
@@ -49,8 +49,8 @@ RSpec.describe Timer do
         expect(timer.reverse(data)).to eq([5, 4, 3, 2, 1])
 
         data_2 = []
-        (50001..100000).each { |x| data_2.push(x)}
-        expect(timer.reverse(data_2)[-1]).to eq(50001)
+        (50_001..100_000).each { |x| data_2.push(x) }
+        expect(timer.reverse(data_2)[-1]).to eq(50_001)
       end
     end
   end
@@ -62,7 +62,7 @@ RSpec.describe Timer do
         expect(timer.shuffle(data)).not_to eq([1, 2, 3, 4, 5])
 
         data_2 = []
-        (50001..100000).each { |x| data_2.push(x)}
+        (50_001..100_000).each { |x| data_2.push(x) }
         expect(timer.shuffle(data_2)).not_to eq(data_2)
       end
     end

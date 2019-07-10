@@ -1,49 +1,49 @@
 require './lib/timer'
 
-#initialize timer
+# initialize timer
 timer = Timer.new
 
-#prepare the data
+# prepare the data
 data_1 = []
-(1..5000).each { |x| data_1.push(x)}
+(1..5_000).each { |x| data_1.push(x) }
 data_2 = []
-(1..10000).each { |x| data_2.push(x)}
+(1..10_000).each { |x| data_2.push(x) }
 data_3 = []
-(1..15000).each { |x| data_3.push(x)}
+(1..15_000).each { |x| data_3.push(x) }
 data_4 = []
-(1..20000).each { |x| data_4.push(x)}
+(1..20_000).each { |x| data_4.push(x) }
 data_5 = []
-(1..25000).each { |x| data_5.push(x)}
+(1..25_000).each { |x| data_5.push(x) }
 data_6 = []
-(1..30000).each { |x| data_6.push(x)}
+(1..30_000).each { |x| data_6.push(x) }
 data_7 = []
-(1..35000).each { |x| data_7.push(x)}
+(1..35_000).each { |x| data_7.push(x) }
 data_8 = []
-(1..40000).each { |x| data_8.push(x)}
+(1..40_000).each { |x| data_8.push(x) }
 data_9 = []
-(1..45000).each { |x| data_9.push(x)}
+(1..45_000).each { |x| data_9.push(x) }
 data_10 = []
-(1..50000).each { |x| data_10.push(x)}
+(1..50_000).each { |x| data_10.push(x) }
 data_11 = []
-(1..55000).each { |x| data_1.push(x)}
+(1..55_000).each { |x| data_1.push(x) }
 data_12 = []
-(1..60000).each { |x| data_2.push(x)}
+(1..60_000).each { |x| data_2.push(x) }
 data_13 = []
-(1..65000).each { |x| data_3.push(x)}
+(1..65_000).each { |x| data_3.push(x) }
 data_14 = []
-(1..70000).each { |x| data_4.push(x)}
+(1..70_000).each { |x| data_4.push(x) }
 data_15 = []
-(1..75000).each { |x| data_5.push(x)}
+(1..75_000).each { |x| data_5.push(x) }
 data_16 = []
-(1..80000).each { |x| data_6.push(x)}
+(1..80_000).each { |x| data_6.push(x) }
 data_17 = []
-(1..85000).each { |x| data_7.push(x)}
+(1..85_000).each { |x| data_7.push(x) }
 data_18 = []
-(1..90000).each { |x| data_8.push(x)}
+(1..90_000).each { |x| data_8.push(x) }
 data_19 = []
-(1..95000).each { |x| data_9.push(x)}
+(1..95_000).each { |x| data_9.push(x) }
 data_20 = []
-(1..100000).each { |x| data_10.push(x)}
+(1..100_000).each { |x| data_10.push(x) }
 
 data_set = [
   data_1,
@@ -77,7 +77,7 @@ data_set.each do |data|
   timer.stop
 end
 
-#puts end of test to create a visual separation between each test
+# puts end of test to create a visual separation between each test
 puts "Finished testing with last"
 puts "\n"
 
@@ -90,7 +90,6 @@ end
 
 puts "Finished testing with reverse"
 puts "\n"
-
 
 data_set.each do |data|
   timer.timed_function("shuffle")
