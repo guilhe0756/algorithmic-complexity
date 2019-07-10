@@ -2,10 +2,12 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+ruby '2.6.0'
 
-# gem "rails"
-
-gem "rubocop", "~> 0.72.0"
-
-gem "simplecov", "~> 0.16.1"
+group :test, :production do
+  gem 'capybara'
+  gem "rubocop", "~> 0.72.0"
+  gem "simplecov", "~> 0.16.1"
+  gem 'simplecov-console'
+  gem 'sinatra'  
+end
