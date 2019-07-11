@@ -21,7 +21,7 @@ class Timer
   end
 
   def last(data)
-    data.pop
+    data[-1]
   end
 
   def reverse(data)

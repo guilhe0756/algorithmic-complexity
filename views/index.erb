@@ -1,14 +1,5 @@
 <center><h1>Algorithmic complexity timer</h1></center>
 <br>
-<h2> Function: .last</h2>
-<h2><% @data_ranges_last.each_with_index do |data_set, index| %></h2>
-      <tr>
-        <td> <%= data_set %> </td>
-        <td> <%= @times_last[index] %></td>
-        <br>
-      </tr>
-    <% end %>
-<br>
 <br>
 <h2> Function: .reverse</h2>
 <h2><% @data_ranges_reverse.each_with_index do |data_set, index| %></h2>
@@ -25,6 +16,16 @@
       <tr>
         <td> <%= data_set %> </td>
         <td> <%= @times_shuffle[index] %></td>
+        <br>
+      </tr>
+    <% end %>
+<br>
+<br>
+<h2> Function: .last</h2>
+<h2><% @data_ranges_last.each_with_index do |data_set, index| %></h2>
+      <tr>
+        <td> <%= data_set %> </td>
+        <td> <%= @times_last[index] %></td>
         <br>
       </tr>
     <% end %>
