@@ -9,8 +9,11 @@ class Timer
     # time is display with minute:second:microsecond (6 digits)
     @result = [
       "Started: #{@start_time.strftime("%M:%S,%6N")}",
-      "Stopped: #{time.strftime("%M:%S,%6N")}"
+      "Stopped: #{time.strftime("%M:%S,%6N")}",
+      "Took #{time - @start_time} seconds"
     ]
+
+    p time - @start_time
   end
 
   def result
@@ -18,7 +21,7 @@ class Timer
   end
 
   def last(data)
-    data[-1]
+    data.pop
   end
 
   def reverse(data)

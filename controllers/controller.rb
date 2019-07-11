@@ -121,14 +121,12 @@ class Controller
   def run_shuffle
     prepare_data
     gather_data
-    
+
     @result_shuffle = []
     @data_ranges = []
     @aggregated_result = []
 
     @data_set.each do |data|
-      p data[0]
-      p data[-1]
       @data_ranges.push([data[0], data[-1]])
       @timer.run
       @timer.shuffle(data)
