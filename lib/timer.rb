@@ -12,8 +12,6 @@ class Timer
       "Stopped: #{time.strftime("%M:%S,%6N")}",
       "Took #{time - @start_time} seconds"
     ]
-
-    p time - @start_time
   end
 
   def result
