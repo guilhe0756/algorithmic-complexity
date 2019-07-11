@@ -16,15 +16,7 @@ RSpec.describe Timer do
     context "when tests finish" do
       it "prints the results to stdoutput" do
         timer.run
-        expect { timer.stop }.to output.to_stdout
-      end
-    end
-  end
-
-  describe "#timed_function" do
-    context "receives a string with a function's name" do
-      it "and prints it to stdouput" do
-        expect { timer.timed_function("last") }.to output.to_stdout
+        expect(timer).to respond_to(:stop)
       end
     end
   end
