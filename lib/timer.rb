@@ -7,8 +7,14 @@ class Timer
   def stop
     time = Time.new
     # time is display with minute:second:microsecond (6 digits)
-    puts "Tests started at #{@start_time.strftime("%M:%S,%6N")}"
-    puts "Tests stoped at #{time.strftime("%M:%S,%6N")}"
+    @result = [
+      "Started: #{@start_time.strftime("%M:%S,%6N")}",
+      "Stopped: #{time.strftime("%M:%S,%6N")}"
+    ]
+  end
+
+  def result
+    @result.dup
   end
 
   def last(data)
@@ -16,11 +22,11 @@ class Timer
   end
 
   def reverse(data)
-    reversed_data = []
+    reversed = []
     until data.count.zero? do
-      reversed_data << data.pop
+      reversed << data.pop
     end
-    reversed_data
+    reversed
   end
 
   def shuffle(data)
@@ -30,10 +36,6 @@ class Timer
       random_element = data.delete_at(random_number)
       shuffled_array << random_element
     end
-  end
-
-  def timed_function(function_name)
-    @timed_function = function_name
-    puts "The timed function was #{@timed_function}"
+    shuffled_array
   end
 end
