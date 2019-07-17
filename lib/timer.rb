@@ -32,10 +32,11 @@ class Timer
 
   def shuffle(data)
     shuffled_array = []
-    until data.count.zero? do
-      random_number = rand(0..data.count - 1)
-      random_element = data.delete_at(random_number)
-      shuffled_array << random_element
+    until data.empty? do
+      random_index = rand data.length
+      shuffled_array << data[random_index]
+      data[random_index] = data.last
+      data.pop
     end
     shuffled_array
   end
